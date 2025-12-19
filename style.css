@@ -5,7 +5,7 @@
 /* --- CSS Variables --- */
 :root {
     /* Cores Azul Premium */
-    --color-bg: #F0F7FF;
+    --color-bg: #ffffff;
     --color-surface: rgba(37, 99, 235, 0.05);
     --color-accent: #2563EB;
     --color-accent-light: #3B82F6;
@@ -56,7 +56,8 @@ html {
 
 body {
     font-family: var(--font-body);
-    background: var(--color-bg);
+    background: linear-gradient(180deg, #2563EB 0%, #3B82F6 15%, #93C5FD 35%, #DBEAFE 55%, #ffffff 75%, #ffffff 100%);
+    background-attachment: fixed;
     color: var(--color-text);
     line-height: 1.6;
     min-height: 100vh;
@@ -69,10 +70,11 @@ body {
     position: relative;
     overflow: hidden;
     background: linear-gradient(180deg, 
-        #F0F7FF 0%,
-        #DBEAFE 30%,
-        #93C5FD 60%,
-        #60A5FA 100%);
+        #2563EB 0%,
+        #3B82F6 25%,
+        #93C5FD 50%,
+        #DBEAFE 75%,
+        #ffffff 100%);
     padding: var(--space-xl) var(--space-md) var(--space-xl);
     display: flex;
     flex-direction: column;
@@ -168,8 +170,9 @@ body {
     font-size: 2.2rem;
     font-weight: 400;
     letter-spacing: 0.25em;
-    color: #2a2a2a;
+    color: #ffffff;
     margin-bottom: 0.5rem;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 .header__tagline {
@@ -179,9 +182,10 @@ body {
     font-size: 0.85rem;
     font-weight: 500;
     font-style: italic;
-    color: var(--color-accent);
+    color: rgba(255, 255, 255, 0.9);
     letter-spacing: 0.15em;
     text-transform: uppercase;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
 }
 
 /* =========================================
@@ -205,15 +209,15 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--color-accent);
+    color: #ffffff;
     text-decoration: none;
-    background: rgba(255, 255, 255, 0.35);
+    background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     box-shadow: 
-        0 4px 15px rgba(37, 99, 235, 0.15),
-        inset 0 1px 2px rgba(255, 255, 255, 0.5);
+        0 4px 15px rgba(0, 0, 0, 0.1),
+        inset 0 1px 2px rgba(255, 255, 255, 0.3);
     transition: var(--transition-smooth);
 }
 
@@ -225,10 +229,10 @@ body {
 
 .social-icons__item:hover {
     transform: translateY(-3px) scale(1.05);
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.35);
     box-shadow: 
-        0 8px 25px rgba(37, 99, 235, 0.25),
-        inset 0 1px 2px rgba(255, 255, 255, 0.6);
+        0 8px 25px rgba(0, 0, 0, 0.15),
+        inset 0 1px 2px rgba(255, 255, 255, 0.4);
 }
 
 .social-icons__item:active {
@@ -315,8 +319,9 @@ body {
     margin-top: var(--space-md);
     font-size: 0.85rem;
     font-weight: 400;
-    color: #4a4a4a;
+    color: rgba(255, 255, 255, 0.85);
     letter-spacing: 0.02em;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 /* =========================================
@@ -327,7 +332,7 @@ body {
     padding: var(--space-lg) 0 var(--space-md);
     margin: 0;
     animation: fadeIn 0.8s ease-out 0.6s both;
-    background: var(--color-bg);
+    background: transparent;
 }
 
 .products__wrapper {
